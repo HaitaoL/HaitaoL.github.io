@@ -12,9 +12,9 @@ $(function () {
     gardenCtx = gardenCanvas.getContext("2d");
     gardenCtx.globalCompositeOperation = "lighter";
     garden = new Garden(gardenCtx, gardenCanvas);
-    $("#content").css("width", $loveHeart.width() + $("#code").width());
+    $("#content").css("width", $loveHeart.width() + $("#code").width()*2);
     $("#content").css("height", Math.max($loveHeart.height(), $("#code").height()));
-    $("#content").css("margin-top", Math.max(($window.height() - $("#content").height()) / 2, 10));
+    $("#content").css("margin-top", Math.max(($window.height() - $("#content").height()) / 4, 10));
     $("#content").css("margin-left", Math.max(($window.width() - $("#content").width()) / 2, 10));
     setInterval(function () {
         garden.render()
@@ -82,7 +82,7 @@ function startHeartAnimation() {
                 if (b >= c.length) {
                     clearInterval(e)
                 }
-            }, 75)
+            }, 150)
         });
         return this
     }
@@ -105,7 +105,7 @@ function timeElapse(c) {
     if (f < 10) {
         f = "0" + f
     }
-    var a = '<span class="digit">' + g + '</span> days <span class="digit">' + b + '</span> hours <span class="digit">' + d + '</span> minutes <span class="digit">' + f + "</span> seconds";
+    var a = '<span class="digit">' + g + '</span> 天 <span class="digit">' + b + '</span> 小时 <span class="digit">' + d + '</span> 分钟 <span class="digit">' + f + "</span> 秒";
     $("#elapseClock").html(a)
 }
 function showMessages() {
@@ -121,6 +121,7 @@ function adjustWordsPosition() {
 }
 function adjustCodePosition() {
     $("#code").css("margin-top", 25)
+    $("#codett").css("margin-top", 25)
 }
 function showLoveU() {
     $("#loveu").fadeIn(3000)
