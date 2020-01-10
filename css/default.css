@@ -48,9 +48,9 @@ body {
 
 #loveu {
     padding: 5px;
-    font-size: 22px;
-    margin-top: 80px;
-    margin-right: 120px;
+    font-size: 40px;
+    margin-top: 70px;
+    margin-right: 110px;
     text-align: right;
     display: none
 }
@@ -71,7 +71,14 @@ body {
     height: 400px;
     color: #333;
     font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", "sans-serif";
-    font-size: 12px
+}
+
+#codett {
+    float: left;
+    width: 440px;
+    height: 400px;
+    color: #333;
+    font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", "sans-serif";
 }
 
 #code .string {
@@ -91,9 +98,13 @@ body {
     margin-left: 7px
 }
 
-#code .comments {
-    color: #3f7f5f
+.comments {
+    color: #FFA07A
 }
+
+/*#codett .comments {
+    color: #3f7f5f
+}*/
 
 #copyright {
     margin-top: 10px;
@@ -119,6 +130,6 @@ body {
     width: 300px;
     height: 20px;
     display:block;
-    margin:0;
+    margin-top:0;
     padding:0;
 }
